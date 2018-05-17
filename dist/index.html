@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Participă &middot; Concurs Someș Delivery 2018</title>
+
+		<link rel="stylesheet" type="text/css" href="partikip.css"/>
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,700,700i|Roboto+Condensed:300,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<meta property="og:image" content="<%= asset_path 'sd-2017.png' %>"/>
+		<meta property="og:title" content="Concurs de proiecte Someș Delivery 2018"/>
+		<meta property="og:url" content="<%= request.original_url %>"/>
+		<meta property="og:description" content="Înscrie până în 30 mai 2018 o idee despre cum putem reconecta râul cu orașul și locuitorii lui, iar noi te ajutăm să o implementezi în cadrul Someș Delivery."/>
+
+	</head>
+	<body class='theme-dark'>
+
+		<header class="header layout layout--hbox layout--spread layout--middle">
+		<h1 class="header-logo layout__item layout__item--fixed-size" role="banner">
+		<a class="header-logo-link" href="http://somesdelivery.ro" rel="home">
+		<img src='http://somesdelivery.ro/wp-content/themes/somesdelivery-theme/static/svg/somes-delivery/somes-delivery.svg' alt='Someș Delivery'>
+		</a>
+		</h1>
+		<nav id="nav-main" class="nav-main layout__item layout__item--grow" role="navigation">
+		<ul>
+		<li>
+		<a href="http://somesdelivery.ro">Acasă</a>
+		</li>
+		<li>
+		<a href="http://somesdelivery.ro/category/noutati/">Noutăți</a>
+		</li>
+		<li>
+		<a href="http://somesdelivery.ro/editii/">Ediții</a>
+		</li>
+		<li>
+		<a href="http://somesdelivery.ro/proiecte/">Proiecte</a>
+		</li>
+		<li>
+		<a href="http://somesdelivery.ro/somesul/">Someșul din Cluj</a>
+		</li>
+		<li>
+		<a href="http://somesdelivery.ro/despre-somes-delivery/">Despre Someș Delivery</a>
+		</li>
+		</ul>
+		</nav><!-- #nav -->
+		</header>
+
+		<article>
+			<div id='app' class='container'></div>
+		</article>
+
+		
+
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+	<!-- 	<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+
+		<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script>
+		<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script> -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script> -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-functions.js"></script> -->
+		<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-storage.js"></script> -->
+
+	<script src="partikip.js"></script>
+</body>
+</html>
