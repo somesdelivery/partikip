@@ -16,7 +16,7 @@ class SubmissionDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		let uid = this.props.match.params.id;
+		let uid = this.props.uid || this.props.match.params.id;
 		firebase.database()
 			.ref(`submissions/${uid}`)
 			.once('value')

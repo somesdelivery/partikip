@@ -1,0 +1,21 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+class Home extends React.Component {
+	render() {
+		return (
+
+			<div>
+				<h1 className='main-title'>
+					<span>
+						<a href='http://somesdelivery.ro/editii/sd-2018'>Someș Delivery 2018</a>
+					</span> Formular de participare
+				</h1>
+				<p><Link to='/nou' className='btn primary'>Formularul online de participare</Link></p>
+				<p>Preferi să-l completezi la tine pe calculator? <a class='btn secondary'>Descarcă .doc</a></p>
+			</div>
+		)
+	}
+}
+
+export default Home;
