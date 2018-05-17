@@ -24,7 +24,7 @@ class SubmissionDetails extends React.Component {
 				let s =  snapshot.val();
 				let rootRef = firebase.storage().ref();
 				Promise.all(
-					s.atasamente.map(f => rootRef.child(`submissions/${uid}/${f}`).getDownloadURL())
+					(s.atasamente || []).map(f => rootRef.child(`submissions/${uid}/${f}`).getDownloadURL())
 				).then(attachments => {
 					this.setState({ 
 						snapshot: {
@@ -41,58 +41,40 @@ class SubmissionDetails extends React.Component {
 		return (
 			<React.Fragment>
 				{
-					snapshot && <table>
-						<tbody>
-							<tr>
-								<th>Membri</th>
-								<td>{snapshot.membri}</td>
-							</tr>
-							<tr>
-								<th>Adresa de email</th>
-								<td>{snapshot.email}</td>
-							</tr>
-							<tr>
-								<th>Nr. de telefon</th>
-								<td>{snapshot.telefon}</td>
-							</tr>
-							<tr>
-								<th>Website</th>
-								<td>{snapshot.website}</td>
-							</tr>
-							<tr>
-								<th>Titlu</th>
-								<td>{snapshot.titlu}</td>
-							</tr>
-							<tr>
-								<th>Descriere</th>
-								<td>{snapshot.descriere}</td>
-							</tr>
-							<tr>
-								<th>Motivație</th>
-								<td>{snapshot.motivatie}</td>
-							</tr>
-							<tr>
-								<th>Detalii tehnice</th>
-								<td>{snapshot.detalii}</td>
-							</tr>
-							<tr>
-								<th>Locul</th>
-								<td>{snapshot.locul}</td>
-							</tr>
-							<tr>
-								<th>Buget</th>
-								<td>{snapshot.buget}</td>
-							</tr>
-							<tr>
-								<th>Atașamente</th>
-								<td>{
-									snapshot.atasamente.map(
-										f => <img src={f}/>
-									)
-								}</td>
-							</tr>
-						</tbody>
-					</table>
+					snapshot && <div class='submission'>
+							<h4>Membri</h4>
+							<div>{snapshot.membri}</div>
+
+							<h4>Adresa de email</h4>
+							<div>{snapshot.email}</div>
+
+							<h4>Nr. de telefon</h4>
+							<div>{snapshot.telefon}</div>
+
+							<h4>Website</h4>
+							<div>{snapshot.website}</div>
+
+							<h4>Titlu</h4>
+							<div>{snapshot.titlu}</div>
+
+							<h4>Descriere</h4>
+							<div>{snapshot.descriere}</div>
+
+							<h4>Motivație</h4>
+							<div>{snapshot.motivatie}</div>
+
+							<h4>Detalii tehnice</h4>
+							<div>{snapshot.detalii}</div>
+
+							<h4>Locul</h4>
+							<div>{snapshot.locul}</div>
+
+							<h4>Buget</h4>
+							<div>{snapshot.buget}</div>
+
+							<h4>Atașamente</h4>
+							<div>{ (snapshot.atasamente || []).map(f => <img src={f}/>) }</div>
+					</div>
 				}
 			</React.Fragment>
 		);

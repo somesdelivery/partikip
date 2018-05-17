@@ -59,6 +59,20 @@ class SubmissionForm extends React.Component {
 		);
 	}
 
+	componentDidUpdate() {
+		if (this.state.state === STATE_READY) {
+			window.onbeforeunload = function() {
+				return "Dacă părăsești pagina conținutul formularului se va pierde!";
+			}
+		} else {
+			window.onbeforeunload = null;
+		}
+	}
+
+	componentWillUnmount() {
+		window.onbeforeunload = null;
+	}
+
 	register(el) {
 		this.form = el;
 	}

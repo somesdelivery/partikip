@@ -9,7 +9,7 @@ class Home extends React.Component {
 				<h1 className='main-title'>
 					<span>
 						<a href='http://somesdelivery.ro/editii/sd-2018'>Someș Delivery 2018</a>
-					</span> Formular de participare
+					</span> Participă
 				</h1>
 				<p><Link to='/nou' className='btn primary'>Formularul online de participare</Link></p>
 				<p>Preferi să-l completezi la tine pe calculator? <a class='btn secondary'>Descarcă .doc</a></p>
