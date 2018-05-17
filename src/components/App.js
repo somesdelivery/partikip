@@ -1,7 +1,6 @@
 import React from 'react';
 
-import '../style/application.css';
-import '../index.html';
+import '../application.css';
 
 import SubmissionForm from './SubmissionForm';
 

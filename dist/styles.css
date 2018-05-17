@@ -59,10 +59,6 @@ p {
 	margin: 1.4em 0;
 }
 
-body.intro {
-	background: #06244B url('/assets/svg/harta-optimizata.svg') no-repeat right 6em;
-	background-size: contain;
-}
 
 article {
 	padding: 0 0 3em;
@@ -315,8 +311,9 @@ footer .partners img {
 .form input[type=text] {
 	border-bottom: 1px solid yellow;
 	font-size: 1.5em;
-	padding: 0.25em 0 0.25em 1.5em;
-	background: url('<%= asset_path 'svg/icon-edit.svg' %>') no-repeat left center;
+	padding: 0.25em 0.5em;
+	/*padding: 0.25em 0 0.25em 1.5em;*/
+	/*background: url('icon-edit.svg') no-repeat left center;*/
 	background-size: 1.25em auto;
 	font-weight: 700;
 	width: 100%;
@@ -611,57 +608,6 @@ li {
 .theme-light .main-links .call-to-action-secondary {
 	background: #bbb;
 	color: #fff;
-}
-
-
-.svg-map {
-	margin: -5em 0 -4em;
-	position: relative;
-	background: url('../svg/tronson-optimizat.svg') center center no-repeat;
-	background-size: contain;
-	padding-bottom: 89%;
-}
-
-.svg-map-2016 {
-	margin: 0;
-	background-image: url('../svg/harta-2016.svg');
-	padding-bottom: 89%;
-	background-color: #06244B;
-}
-
-.svg-map-tronson {
-	margin: -10em 0 -4em;
-	position: relative;
-	background: url('../svg/harta-light.svg') center center no-repeat;
-	background-size: contain;
-	padding-bottom: 89%;
-}
-
-.svg-map-tronson-2016 {
-	background-image: url("../svg/harta-light-2016.svg");
-	position: relative;
-	margin: -5em 0 0;
-}
-
-.svg-map-program {
-	margin: -8em 0 -7em;
-	position: relative;
-	background: url('../svg/harta-program.svg') center center no-repeat;
-	background-size: contain;
-	padding-bottom: 50%;
-}
-
-.svg-map-tronson-2016 .call-to-action {
-	width: 6em;
-	height: 6em;
-	position: absolute;
-	top: 50%;
-	left: 41%;
-}
-
-.svg-map-tronson-2016 .call-to-action span {
-	left: 0;
-	right: 0;
 }
 
 .button-decoration {
@@ -998,19 +944,6 @@ table.schedule td:first-child {
 	}
 }
 
-
-
-
-.foto-hero {
-	border-top: 1px solid transparent;
-	margin-top: 0.75em;
-	padding: 0.75em 0 2em;
-	background-image:url("/assets/img/somes-foto.png");
-	background-repeat: no-repeat; 
-	background-position: left top; 
-	background-size: cover;
-}
-
 .foto-hero .container {
 	position: relative;
 }
@@ -1274,17 +1207,6 @@ table.schedule td:first-child {
 	background-repeat: no-repeat;
 }
 
-.project-item-large a:after {
-	width: 2em;
-	height: 3em;
-	position: absolute;
-	background: url(/assets/svg/icons/arrow-left-black.svg) no-repeat center center;
-	background-size: contain;
-	bottom: 1.5em;
-	left: 1.25em;
-	content: ' ';
-}
-
 .project-list-row.image-right .project-item-large a:after {
 	left: auto;
 	right: 1.25em;
@@ -1328,16 +1250,6 @@ table.schedule td:first-child {
 	margin-top: 0.5em;
 }
 
-.project-item-small a:after {
-	width: 2em;
-	height: 3em;
-	position: absolute;
-	background: url(/assets/svg/icons/camera.svg) no-repeat center center;
-	background-size: contain;
-	bottom: 0.5em;
-	right: 1em;
-	content: ' ';
-}
 
 .contact-links {
 	margin: 0;
