@@ -15,6 +15,8 @@ module.exports = {
 	// Main app file
 	entry: './src/index.js',
 
+	mode: 'production',
+
 	// Path to output JS bundle
 	output: {
 		path: __dirname + '/dist',
