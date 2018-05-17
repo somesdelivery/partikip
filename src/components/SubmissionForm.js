@@ -28,7 +28,15 @@ class SubmissionForm extends React.Component {
 	}
 
 	componentDidMount() {
-		firebase.auth().signOut().then(() => { firebase.auth().signInAnonymously() });
+		firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(
+			() => {
+				firebase.auth().signOut().then(
+					() => { 
+						firebase.auth().signInAnonymously();
+					}
+				);
+			}
+		);
 		firebase.auth().onAuthStateChanged(user => this.setState({ user }));
 	}
 
@@ -64,7 +72,7 @@ class SubmissionForm extends React.Component {
 		return (
 			<React.Fragment>
 				{ 
-					this.state.user &&
+					this.state.user ?
 						<form className='form' ref={this.register} onSubmit={this.handleSubmit}>
 							<h1 className='main-title'>
 								<span>
@@ -155,6 +163,8 @@ class SubmissionForm extends React.Component {
 								</div>
 							</div>
 						</form>
+						:
+						"Se pregătește formularul de participare"
 				}
 			</React.Fragment>
 		);
