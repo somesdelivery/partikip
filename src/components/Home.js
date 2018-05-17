@@ -12,7 +12,7 @@ class Home extends React.Component {
 					</span> Participă
 				</h1>
 				<p><Link to='/nou' className='btn primary'>Formularul online de participare</Link></p>
-				<p>Preferi să-l completezi la tine pe calculator? <a class='btn secondary'>Descarcă .doc</a></p>
+				<p>Preferi să-l completezi la tine pe calculator? <Link to='/offline' className='btn primary'>Descarcă .doc</Link></p>
 			</div>
 		)
 	}

@@ -10,7 +10,7 @@ body {
 
 .theme-dark {
 	color: #fff;
-	background: #06244B;
+	background: #23326b;
 }
 
 .theme-light {
@@ -71,7 +71,7 @@ input, select, textarea, button {
 
 a {
 	text-decoration: none;
-	color: yellow;
+	color: #F6E500;
 }
 
 a img {
@@ -133,7 +133,7 @@ article strong {
 */
 
 header {
-	background: #06244b;
+	background: #23326b;
 	/*text-align: center;*/
 	padding: 1em;
 }
@@ -185,7 +185,7 @@ body.single-proiect .menu-item-object-proiect a,
 body.single-editie .menu-item-object-editie a {
 	border-bottom: 0.2em solid #009eff;
 	margin-bottom: -0.2em;
-	color: yellow;
+	color: #F6E500;
 }
 
 
@@ -309,7 +309,7 @@ footer .partners img {
 }
 
 .form input[type=text] {
-	border-bottom: 1px solid yellow;
+	border-bottom: 1px solid #F6E500;
 	font-size: 1.5em;
 	padding: 0.25em 0.5em;
 	/*padding: 0.25em 0 0.25em 1.5em;*/
@@ -320,7 +320,7 @@ footer .partners img {
 }
 
 .form textarea {
-	border: 1px solid yellow;
+	border: 1px solid #F6E500;
 	width: 100%;
 	padding: 1em;
 	border-radius: 3px;
@@ -328,7 +328,7 @@ footer .partners img {
 }
 
 .btn {
-	background: yellow;
+	background: #F6E500;
 	color: #06244B;
 	display: inline-block;
 	padding: 1em 2em;
@@ -386,7 +386,7 @@ footer .partners img {
 .col-secondary {
 	width: 16.8%;
 	font-size: 0.75em;
-	color: yellow;
+	color: #F6E500;
 	line-height: 1.6;
 }
 
@@ -419,7 +419,7 @@ footer .partners img {
 }
 
 .step {
-	background: yellow;
+	background: #F6E500;
 	border-radius: 50%;
 	color: #06244B;
 	width: 2em;
@@ -443,21 +443,21 @@ footer .partners img {
 }
 
 .submit-info {
-	color: yellow;
+	color: #F6E500;
 	/*font-size: 1.2em;*/
 	font-weight: bold;
 }
 
 .form-info {
 	padding: 1em 2em;
-	border: 1px solid yellow;
+	border: 1px solid #F6E500;
 	border-radius: 0.2em;
 	font-size: 1.2em;
 	margin: 3em 0;
 }
 
 .form-info a:not(.btn) {
-	color: yellow;
+	color: #F6E500;
 }
 
 .note {
@@ -537,7 +537,7 @@ li {
 */
 
 .call-to-action {
-	background: yellow;
+	background: #F6E500;
 	color: #06244B;
 	position: relative;
 	height: 8em;
@@ -583,7 +583,7 @@ li {
 }
 
 .theme-light .call-to-action {
-	background: yellow;
+	background: #F6E500;
 	color: #06244B;
 }
 
@@ -591,7 +591,7 @@ li {
 .call-to-action:hover,
 .theme-light .call-to-action:hover {
 	background: #06244B;
-	color: yellow;
+	color: #F6E500;
 }
 
 
@@ -611,7 +611,7 @@ li {
 }
 
 .button-decoration {
-	border-bottom: 1px dashed yellow;
+	border-bottom: 1px dashed #F6E500;
 	height: 0;
 	position: relative;
 	margin: 7em 0 5em;
@@ -646,7 +646,7 @@ table.schedule tr {
 }
 
 table.schedule tr:nth-child(2n+1) {
-	background: yellow;
+	background: #F6E500;
 }
 
 table.schedule td:first-child {

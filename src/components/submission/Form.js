@@ -69,7 +69,7 @@ const Form = ({ register, handleSubmit }) =>
 			<p>Unele lucruri pot fi explicate mai bine în imagini. Dacă e nevoie, încarcă până la cinci imagini reprezentative pentru proiectul tău. Acceptăm fișiere în formatele PDF, JPG, PNG, TIFF. <span className='input-note'>(Pentru a selecta mai multe fișiere de pe computer, dați click pe fișiere având tasta Ctrl apăsată)</span></p>
 
 			<div className="form-item">
-				<input type='file' multiple className="form-attachments" name='atasamente'/>
+				<input type='file' multiple className="form-attachments" name='atasamente' accept='image/png,image/jpg,image/tiff,application/pdf'/>
 			</div>
 			<small><a href='#' className='clear-attachments'>Elimină atașamentele</a></small>
 		</section>
