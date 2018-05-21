@@ -11,8 +11,17 @@ class Home extends React.Component {
 						<a href='http://somesdelivery.ro/editii/sd-2018'>Someș Delivery 2018</a>
 					</span> Participă
 				</h1>
-				<p><Link to='/nou' className='btn primary'>Formularul online de participare</Link></p>
-				<p>Preferi să-l completezi la tine pe calculator? <Link to='/offline' className='btn primary'>Descarcă .doc</Link></p>
+				
+				<div class='layout layout--hbox layout--stretch layout--spread'>
+					<div class='layout__item'>
+						<p>Completează formularul direct din browser:</p>
+						<Link to='/nou' className='btn'>Formularul online de participare</Link>
+					</div>
+					<div class='layout__item'>
+						<p>Preferi să-l completezi la tine pe calculator?</p>
+						<Link to='/offline' className='btn btn--secondary'>Descarcă .doc</Link>
+					</div>
+				</div>
 			</div>
 		)
 	}

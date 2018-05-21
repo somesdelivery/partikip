@@ -11,15 +11,17 @@ import SubmissionDetails from './SubmissionDetails';
 
 class App extends React.Component {
 	render() {
-		return <Router>
-			<div>
-				<Route exact path='/' component={Home}/>
-				<Route exact path='/nou' component={Submission}/>
-				<Route exact path='/offline' component={Offline}/>
-				<Route exact path='/inscrieri' component={SubmissionList}/>
-				<Route path='/inscrieri/:id' component={SubmissionDetails}/>
-			</div>
-		</Router>;
+		return (
+			<Router>
+				<div>
+					<Route exact path='/' component={Home}/>
+					<Route exact path='/nou' component={Submission}/>
+					<Route exact path='/offline' component={Offline}/>
+					<Route exact path='/inscrieri' component={SubmissionList}/>
+					<Route path='/inscrieri/:id' component={SubmissionDetails}/>
+				</div>
+			</Router>
+		);
 	}
 }
 

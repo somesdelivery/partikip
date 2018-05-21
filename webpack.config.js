@@ -20,7 +20,7 @@ module.exports = {
 	// Path to output JS bundle
 	output: {
 		path: __dirname + '/dist',
-		filename: 'bundle.js',
+		filename: 'bundle.[chunkhash].js',
 		publicPath: '/'
 	},
 

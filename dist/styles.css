@@ -1,3 +1,148 @@
+/* ---------------------------------------------------------------------------------- */
+
+/* 
+	FLEXBOX LAYOUT
+	--------------
+	
+	We're using the BEM naming methodology (http://getbem.com/naming/).
+
+	Block: 
+		.layout
+	Elements: 
+		.layout__item
+	Modifiers:
+		.layout__item--fixed-size
+		.layout__item--grow,
+		et cetera
+
+*/
+
+/* 
+	The basic building block is a layout container that will distribute 
+	its child elements either horizontally or vertically. 
+*/
+.layout {
+	display: flex;
+}
+
+/* 
+	The children of a layout container may be laid either horizontally
+	or vertically, depending on the `flex-direction` property. 
+
+	Here we create two modifiers for the .layout box
+*/
+
+.layout--hbox {
+	flex-direction: row;
+}
+
+.layout--vbox {
+	flex-direction: column;
+}
+
+/* 
+	A layout that stretches all child elements to the same size.
+
+	This is useful for things like sidebars for which we might want 
+	to have a background that stretches all the way down.
+	(Even if the sidebar only has a little content)
+*/
+.layout--stretch {
+	align-items: stretch;
+}
+
+/*
+	The alternative to stretching the child elements is to align 
+	them in some way. In some situations, such as in headers that 
+	contain logos and navigation menus, you may want to align all
+	children centrally.
+*/
+.layout--middle {
+	align-items: center;
+}
+
+/*
+	In situation where we need children to 'float' at opposite directions of the layout,
+	we can use the `justify-content` property to push them to the edges.
+*/
+.layout--spread {
+	justify-content: space-between;
+}
+
+.layout--grid {
+	justify-content: space-between;
+	margin: 1.5em -0.75em;
+}
+
+.layout--grid .layout__item {
+	flex: 1;
+	margin: 0 0.75em;
+}
+
+/*
+	This is the only element we need in a layout block.
+	By default, a `layout__item` does not need to do anything special.
+	It has `flex: 0 1 auto` which is a shorthand for:
+		- flex-grow: 0
+		- flex-shrink: 1
+		- flex-basis: auto
+
+	We do however set `overflow: hidden` on it, so that we can enable
+	scrolling on items that need it (see modifiers below).
+*/
+.layout__item {
+	/*overflow: hidden;*/
+}
+
+.layout__item > :first-child {
+	margin-top: 0;
+}
+
+.layout__item > :last-child {
+	margin-bottom: 0;
+}
+
+/*
+	A layout item that grows to fill the available space.
+*/
+.layout__item--grow  {
+	flex-grow: 1;
+}
+
+/*
+	A layout item that shows a scrollbar in case its content overflows
+*/
+.layout__item--scroll {
+	overflow: auto;
+}
+
+/*
+	A layout item that maintains a fixed size.
+	(Either width or height, depending on how the items are laid out)
+
+	This is accomplished by setting both `flex-grow` and `flex-shrink` to 0,
+	in effect disabling the flexibility on the item.
+*/
+.layout__item--fixed-size {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+/*
+	For items with a fixed size, we control that size by setting the 
+	`flex-basis` property rather than the `width` or `height` property.
+
+	Below, we define a couple of sizes that are used throughout the layout.
+*/
+
+.layout__item--width-medium {
+	flex-basis: 12em;
+}
+
+.layout__item--height-small {
+	flex-basis: 3em;
+}
+
 body {
 	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	
@@ -6,11 +151,13 @@ body {
 	line-height: 1.4;
 	font-weight: 300;
 	border: 1em solid #fff;
+
+	min-height: 100vh;
 }
 
 .theme-dark {
 	color: #fff;
-	background: #06244B;
+	background: #23326b;
 }
 
 .theme-light {
@@ -71,7 +218,7 @@ input, select, textarea, button {
 
 a {
 	text-decoration: none;
-	color: yellow;
+	color: #F6E500;
 }
 
 a img {
@@ -110,13 +257,11 @@ article strong {
 
 .main-title span {
 	font-size: 0.2em;
-	text-transform: lowercase;
-	font-variant: small-caps;
 	display: block;
-	font-weight: bold;
-	letter-spacing: 0.06em;
 	position: relative;
 	z-index: 10;
+	font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+	color: #F6E500;
 }
 
 .main-title a {
@@ -133,7 +278,7 @@ article strong {
 */
 
 header {
-	background: #06244b;
+	background: #23326b;
 	/*text-align: center;*/
 	padding: 1em;
 }
@@ -185,7 +330,7 @@ body.single-proiect .menu-item-object-proiect a,
 body.single-editie .menu-item-object-editie a {
 	border-bottom: 0.2em solid #009eff;
 	margin-bottom: -0.2em;
-	color: yellow;
+	color: #F6E500;
 }
 
 
@@ -309,7 +454,7 @@ footer .partners img {
 }
 
 .form input[type=text] {
-	border-bottom: 1px solid yellow;
+	border-bottom: 1px solid #F6E500;
 	font-size: 1.5em;
 	padding: 0.25em 0.5em;
 	/*padding: 0.25em 0 0.25em 1.5em;*/
@@ -320,7 +465,7 @@ footer .partners img {
 }
 
 .form textarea {
-	border: 1px solid yellow;
+	border: 1px solid #F6E500;
 	width: 100%;
 	padding: 1em;
 	border-radius: 3px;
@@ -328,17 +473,24 @@ footer .partners img {
 }
 
 .btn {
-	background: yellow;
+	background: #F6E500;
+	border: 0.1em solid transparent;
 	color: #06244B;
 	display: inline-block;
 	padding: 1em 2em;
-	border-radius: 0.2em;
+	border-radius: 0.3em;
 	text-transform: uppercase;
 	/*font-variant: small-caps;*/
 	font-weight: 400;
 	font-size: 0.9em;
 	letter-spacing: 0.1em;
 	border: none;
+}
+
+.btn--secondary {
+	background: transparent;
+	border: 0.1em solid #F6E500;
+	color: #F6E500;
 }
 
 .row:after, .project-list-row:after, .clearfix:after {
@@ -386,7 +538,7 @@ footer .partners img {
 .col-secondary {
 	width: 16.8%;
 	font-size: 0.75em;
-	color: yellow;
+	color: #F6E500;
 	line-height: 1.6;
 }
 
@@ -419,7 +571,7 @@ footer .partners img {
 }
 
 .step {
-	background: yellow;
+	background: #F6E500;
 	border-radius: 50%;
 	color: #06244B;
 	width: 2em;
@@ -443,21 +595,21 @@ footer .partners img {
 }
 
 .submit-info {
-	color: yellow;
+	color: #F6E500;
 	/*font-size: 1.2em;*/
 	font-weight: bold;
 }
 
 .form-info {
 	padding: 1em 2em;
-	border: 1px solid yellow;
+	border: 1px solid #F6E500;
 	border-radius: 0.2em;
 	font-size: 1.2em;
 	margin: 3em 0;
 }
 
 .form-info a:not(.btn) {
-	color: yellow;
+	color: #F6E500;
 }
 
 .note {
@@ -537,7 +689,7 @@ li {
 */
 
 .call-to-action {
-	background: yellow;
+	background: #F6E500;
 	color: #06244B;
 	position: relative;
 	height: 8em;
@@ -583,7 +735,7 @@ li {
 }
 
 .theme-light .call-to-action {
-	background: yellow;
+	background: #F6E500;
 	color: #06244B;
 }
 
@@ -591,7 +743,7 @@ li {
 .call-to-action:hover,
 .theme-light .call-to-action:hover {
 	background: #06244B;
-	color: yellow;
+	color: #F6E500;
 }
 
 
@@ -611,7 +763,7 @@ li {
 }
 
 .button-decoration {
-	border-bottom: 1px dashed yellow;
+	border-bottom: 1px dashed #F6E500;
 	height: 0;
 	position: relative;
 	margin: 7em 0 5em;
@@ -646,7 +798,7 @@ table.schedule tr {
 }
 
 table.schedule tr:nth-child(2n+1) {
-	background: yellow;
+	background: #F6E500;
 }
 
 table.schedule td:first-child {
@@ -1638,4 +1790,8 @@ table.schedule td:first-child {
 	text-decoration: underline;
 	color: inherit;
 	font-weight: bold;
+}
+
+.submission img {
+	max-width: 100%;
 }

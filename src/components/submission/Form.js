@@ -77,19 +77,11 @@ const Form = ({ register, handleSubmit }) =>
 		<section>
 			<h2><span className='step'>4</span> Hârțogăraie</h2>
 			<div className="form-item">
-				<label><input type='checkbox' required name='acord'/> Am citit și sunt de acord cu <a href='http://somesdelivery.ro/editii/sd-2017/regulament' target='_blank'>Regulamentul de participare</a>.</label>
+				<label><input type='checkbox' required name='acord'/> Am citit și sunt de acord cu <a href='http://somesdelivery.ro/editii/sd-2018/regulament' target='_blank'>Regulamentul de participare</a>.</label>
 			</div>
 		</section>
 		
 		<button type='submit' className='btn submit-link'>Înscrie proiectul în concurs</button>
-
-		<div className='display-overlay'>
-			<div className='display-overlay-inner'>
-				<h3>Propunerea ta se trimite acum...</h3>
-				<p>Te rugăm să nu închizi această fereastră. Acest proces poate dura câteva minute, mai ales dacă ilustrațiile atașate sunt de mari dimensiuni.</p>
-				<p>În caz că întâmpini probleme cu trimiterea propunerii, poți folosi <a href='http://somesdelivery.ro/editii/sd-2017/formular' target='_blank'>formularul offline</a>.</p>
-			</div>
-		</div>
 	</form>;
 
 export default Form;
