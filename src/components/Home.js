@@ -8,7 +8,7 @@ class Home extends React.Component {
 			<div>
 				<h1 className='main-title'>
 					<span>
-						<a href='http://somesdelivery.ro/editii/sd-2018'>Someș Delivery 2018</a>
+						<a href='http://somesdelivery.ro/editii/sd-2019'>Someș Delivery 2019</a>
 					</span> Participă
 				</h1>
 				

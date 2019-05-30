@@ -4,10 +4,10 @@ const Form = ({ register, handleSubmit }) =>
 	<form className='form' ref={register} onSubmit={handleSubmit}>
 		<h1 className='main-title'>
 			<span>
-				<a href='http://somesdelivery.ro/editii/sd-2018'>Someș Delivery 2018</a>
+				<a href='http://somesdelivery.ro/editii/sd-2019'>Someș Delivery 2019</a>
 			</span> Formular de participare
 		</h1>
-		<h3>După ce ai citit <a href="http://somesdelivery.ro/editii/sd-2018/regulament" target='_blank'>Regulamentul concursului</a>, completează formularul de mai jos.</h3>
+		<h3>După ce ai citit <a href="http://somesdelivery.ro/editii/sd-2019/regulament" target='_blank'>Regulamentul concursului</a>, completează formularul de mai jos.</h3>
 		<section>
 			<h2><span className='step'>1</span> Echipa</h2>
 			<div className="form-item">
@@ -77,7 +77,7 @@ const Form = ({ register, handleSubmit }) =>
 		<section>
 			<h2><span className='step'>4</span> Hârțogăraie</h2>
 			<div className="form-item">
-				<label><input type='checkbox' required name='acord'/> Am citit și sunt de acord cu <a href='http://somesdelivery.ro/editii/sd-2018/regulament' target='_blank'>Regulamentul de participare</a>.</label>
+				<label><input type='checkbox' required name='acord'/> Am citit și sunt de acord cu <a href='http://somesdelivery.ro/editii/sd-2019/regulament' target='_blank'>Regulamentul de participare</a>.</label>
 			</div>
 		</section>
 		

@@ -1,8 +1,9 @@
 {
-	"apiKey": "AIzaSyArFvMYhypWs22CmVrpd1G2AqM-t1piFBc",
-	"authDomain": "sd-concurs-2018.firebaseapp.com",
-	"databaseURL": "https://sd-concurs-2018.firebaseio.com",
-	"projectId": "sd-concurs-2018",
-	"storageBucket": "gs://sd-concurs-2018.appspot.com/",
-	"messagingSenderId": "551767314639"
+"apiKey": "AIzaSyB5RgNyqlMRXGHN0sqnjm97r-dxAZCfppM",
+"authDomain": "sd-concurs-2019.firebaseapp.com",
+"databaseURL": "https://sd-concurs-2019.firebaseio.com",
+"projectId": "sd-concurs-2019",
+"storageBucket": "sd-concurs-2019.appspot.com",
+"messagingSenderId": "725606993629",
+"appId": "1:725606993629:web:843be3b3cc28eff3"
 }
