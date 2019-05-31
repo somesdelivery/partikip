@@ -10,7 +10,7 @@ class Offline extends React.Component {
 			<ol className='tight'>
 				<li>Completează toate cîmpurile din formularul de mai jos, în zonele marcate cu verde și salvează documentul</li>
 				<li>Arhivează în format ZIP documentul împreună cu până la cinci imagini reprezentative pentru proiect (vezi secțiunea Ilustrații)</li>
-				<li>Trimite arhiva la adresa <a href='mailto:concurs@somesdelivery.ro'>concurs@somesdelivery.ro</a> până în data de <strong>30 mai 2019</strong> ora 23:59 ca să te înscrii în concurs.</li>
+				<li>Trimite arhiva la adresa <a href='mailto:concurs@somesdelivery.ro'>concurs@somesdelivery.ro</a> până în data de <strong>14 iunie 2019</strong> ora 23:59 ca să te înscrii în concurs.</li>
 			</ol>
 
 			<p>Prin participare confirmi că ai citit și ești de acord cu regulamentul concursului, <a href='http://somesdelivery.ro/editii/sd-2019/regulament/'>disponibil aici</a>.</p>
